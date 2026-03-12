@@ -1,0 +1,54 @@
+<!DOCTYPE html> 
+
+<html lang="en"> 
+
+<head> 
+
+    <meta charset="UTF-8"> 
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+    <title>About my website </title> 
+
+</head> 
+
+<body> 
+
+    <header> 
+
+        <h1>About my website</h1> 
+
+        <nav> 
+
+            <a href="index.html">Home</a> | 
+
+            <a href="about.html">About</a> | 
+
+            <a href="contact.html">Contact</a> 
+
+        </nav> 
+
+    </header> 
+
+ 
+
+    <main> 
+       <p>This website is an E-commerce retail site with product catalog, shopping cart , and checkout ,it aims to probide an easy to use online shopping platform for crocs footwear and football t-shirts . The goal is to increase accessibility for customers ,promote sports ans casual fashion, and enable secure online purchase..</p> 
+
+        <p> target Audience 
+            Age; 15-40 , students , young professionals , sports fans .
+        </p>
+
+    </main> 
+
+ 
+
+    <footer> 
+
+        <p>&copy; 2026 Angie`s Closet </p> 
+
+    </footer> 
+
+</body> 
+
+</html>    
