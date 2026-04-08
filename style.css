@@ -1,1 +1,43 @@
-
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+</style>
+body{
+  
+.roboto-condensed-<uniquifier> {
+  font-family: "Roboto Condensed", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  margin: 0;
+}
+  .container{
+    width: 900px;
+    max-width: 90vw;
+    margin: auto;
+    text-align: center;
+    padding-top: 10px;
+  }
+  svg{
+    width: 30px;
+  }
+  header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+  }
+  header .icon-cart {
+      position: relative;
+   header .icon-cart span;
+  display: flex;
+  width: 30px;
+  height: 30px;
+  background-color: purple;
+  justify-content: center;
+  align-items:center;
+  color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  }
