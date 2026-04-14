@@ -1,25 +1,18 @@
-/* ============================
-   Reset
-============================ */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ============================
-   Body
-============================ */
+/* Body */
 body {
   font-family: 'Segoe UI', Arial, sans-serif;
-  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
   color: white;
-  min-height: 100vh;
+  background: #0f2027;
 }
 
-/* ============================
-   Header
-============================ */
+/* Header */
 header {
   display: flex;
   justify-content: space-between;
@@ -27,12 +20,10 @@ header {
   background: rgba(0,0,0,0.8);
   padding: 20px 40px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-  flex-wrap: wrap;
 }
 
 header h1 {
   font-size: 28px;
-  letter-spacing: 2px;
   color: #00bfff;
 }
 
@@ -44,9 +35,7 @@ nav {
 nav a {
   color: #00bfff;
   text-decoration: none;
-  font-size: 16px;
   font-weight: 500;
-  position: relative;
   transition: color 0.3s ease;
 }
 
@@ -54,28 +43,21 @@ nav a:hover {
   color: #fff;
 }
 
-nav a::after {
-  content: "";
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  background: #00bfff;
-  left: 0;
-  bottom: -5px;
-  transition: width 0.3s ease;
-}
-
-nav a:hover::after {
-  width: 100%;
-}
-
-/* ============================
-   Hero Section
-============================ */
+/* Hero Section with Pinterest iframe background */
 .hero-section {
-  height: 70vh;
-  background: url("image/hero.jpg") center/cover no-repeat;
   position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-section iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: none;
+  top: 0;
+  left: 0;
+  z-index: 0;
 }
 
 .hero-overlay {
@@ -83,6 +65,7 @@ nav a:hover::after {
   width: 100%;
   height: 100%;
   background: rgba(0,0,0,0.6);
+  z-index: 1;
 }
 
 .hero-text {
@@ -91,34 +74,14 @@ nav a:hover::after {
   text-align: center;
   top: 50%;
   transform: translateY(-50%);
-  color: white;
 }
 
 .hero-title {
   font-size: 60px;
-  letter-spacing: 3px;
-  animation: fadeDown 2s ease;
+  color: #00bfff;
 }
 
-.hero-subtitle {
-  font-size: 22px;
-  margin-top: 15px;
-  animation: fadeUp 2s ease;
-}
-
-@keyframes fadeDown {
-  from { opacity: 0; transform: translateY(-40px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(40px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* ============================
-   Product Grid
-============================ */
+/* Product Sections */
 main {
   max-width: 1200px;
   margin: 40px auto;
@@ -170,6 +133,12 @@ h2 {
   margin-bottom: 10px;
 }
 
+.product-card .sizes {
+  font-size: 14px;
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
 .product-card button {
   background: #00bfff;
   border: none;
@@ -185,27 +154,7 @@ h2 {
   background: #0080ff;
 }
 
-/* ============================
-   Pinterest Section
-============================ */
-.inspiration {
-  text-align: center;
-  margin: 40px auto;
-}
-
-.inspiration h2 {
-  margin-bottom: 20px;
-}
-
-.inspiration iframe {
-  margin: 10px;
-  border-radius: 10px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.5);
-}
-
-/* ============================
-   Footer
-============================ */
+/* Footer */
 footer {
   margin-top: 40px;
   padding: 20px;
