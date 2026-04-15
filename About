@@ -1,85 +1,79 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Angie’s Closet</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>About Us</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="shop.html">Shop</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-<html lang="en"> 
-
-<head> 
-
-    <meta charset="UTF-8"> 
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-
-    <title>About my website </title> 
-
-</head> 
-
-<body> 
-
-    <header> 
-
-        <h1>About Us</h1>
-        
-        Who We Are 
-        We`re more than just an online closet -we`re  a lifestyle hub for people who love comfort and passion.Whether it`s slpping into Crocs that carry you through everyday adventures  or wearing footbal-t-shirts that show off your team pride ,we celebrate the blend of ease and energy
-        
-        Our Mission 
-        To bring together comfort and culture .We believe fashion should feel good and tell a story -your story . That`s why we curate Crocs for every mood and football t-shirts that let fans wear their loyalty lound and proud.
-         
-        Our Why 
-        We started a simple idea ; Eveday gear should be fun, functional and full of personality . Crocs give you freedom to move , football t-shirts give you a way to belong Together they create a community of fans who live boldly and comfortably
-        
-        Our Promise
-        |-Comfort that doesn`t compromise 
-         -Authentic football culture in every t-shirt 
-         -A space where individuality and fandom meet
-         
-         Tagline Ideas
-          -"Comfort meets passion"
-          -"From the streets to the stadium"
-          -"Step Easy, cheer loud"
-           <div"></div>
-
-        <nav> 
-
-            <a href="index.html">Home</a> | 
-
-            <a href="About.html">About</a> | 
-
-            <a href="contact.html">Contact</a> 
-
-            <a href="shop.html">shop</a>
-
-        </nav> 
-
-    </header> 
-
- 
-
-    <section id="contact info"> 
-    <h3>Contact Information</h3>
-    <p>Email:info@angelanatasha093@gmail.com</>
-    <p>Phone: +267 123 4567</p>
-    <p>Location:Gaborone,Botswana</p>
-
+  <main>
+    <section class="about-section">
+      <h2>Who We Are</h2>
+      <p>We’re more than just an online closet — we’re a lifestyle hub for people who love comfort and passion. Whether it’s slipping into Crocs that carry you through everyday adventures or wearing football t-shirts that show off your team pride, we celebrate the blend of ease and energy.</p>
     </section>
 
-     <main>
+    <section class="about-section">
+      <h2>Our Mission</h2>
+      <p>To bring together comfort and culture. We believe fashion should feel good and tell a story — your story. That’s why we curate Crocs for every mood and football t-shirts that let fans wear their loyalty loud and proud.</p>
+    </section>
 
-       <p>This website is an E-commerce retail site with product catalog, shopping cart , and checkout ,it aims to probide an easy to use online shopping platform for crocs footwear and football t-shirts . The goal is to increase accessibility for customers ,promote sports ans casual fashion, and enable secure online purchase..</p> 
+    <section class="about-section">
+      <h2>Our Why</h2>
+      <p>We started with a simple idea: everyday gear should be fun, functional, and full of personality. Crocs give you freedom to move, football t-shirts give you a way to belong. Together they create a community of fans who live boldly and comfortably.</p>
+    </section>
 
-        <p> target Audience 
-            Age; 15-40 , students , young professionals , sports fans .
-        </p>
+    <section class="about-section">
+      <h2>Our Promise</h2>
+      <ul>
+        <li>Comfort that doesn’t compromise</li>
+        <li>Authentic football culture in every t-shirt</li>
+        <li>A space where individuality and fandom meet</li>
+      </ul>
+    </section>
+
+    <section class="about-section">
+      <h2>Tagline Ideas</h2>
+      <ul>
+        <li>“Comfort meets passion”</li>
+        <li>“From the streets to the stadium”</li>
+        <li>“Step Easy, cheer loud”</li>
+      </ul>
+    </section>
+
+    <section class="contact-info">
+      <h3>Contact Information</h3>
+      <p>Email: info@angelanatasha093@gmail.com</p>
+      <p>Phone: +267 123 4567</p>
+      <p>Location: Gaborone, Botswana</p>
+    </section>
+
+    <section class="about-section">
+      <h2>Our Platform</h2>
+      <p>This website is an e-commerce retail site with product catalog, shopping cart, and checkout. It aims to provide an easy-to-use online shopping platform for Crocs footwear and football t-shirts. The goal is to increase accessibility for customers, promote sports and casual fashion, and enable secure online purchases.</p>
+      <p><strong>Target Audience:</strong> Age 15–40, students, young professionals, sports fans.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Angie’s Closet</p>
+  </footer>
+</body>
+</html>
+
+
+        
      
-    </main> 
-
  
 
-    <footer> 
 
-        <p> 2026 Angie`s Closet </p> 
-
-    </footer> 
-
-</body> 
-
-</html>    
