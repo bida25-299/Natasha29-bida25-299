@@ -9,28 +9,38 @@
 
 <h2>Your Cart</h2>
 <ul id="cart-list" class="list-group mb-3"></ul>
-  <li class="nav-item">
-  <a class="nav-link" href="cart.html">Cart 🛒</a>
-</li>
+  <nav class="navbar navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand" href="#">Your Store</a>
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="cart.html">Cart 🛒</a>
+      </li>
+    </ul>
+  </div>
+</nav>
 
 <h4 id="total"></h4>
 
 <script>
-let cart = JSON.parse(localStorage.getItem("cart")) || [];
-let list = document.getElementById("cart-list");
-let total = 0;
-
-cart.forEach(item => {
+cart.forEach((item, index) => {
     let li = document.createElement("li");
-    li.className = "list-group-item";
-    li.textContent = item.name + " x" + item.quantity + " - P" + (item.price * item.quantity);
-    
+    li.className = "list-group-item d-flex justify-content-between align-items-center";
+
+    li.innerHTML = `
+        ${item.name} x${item.quantity} - P${item.price * item.quantity}
+        <button class="btn btn-sm btn-danger" onclick="removeItem(${index})">Remove</button>
+    `;
+
     total += item.price * item.quantity;
     list.appendChild(li);
 });
 
-document.getElementById("total").textContent = "Total: P" + total;
-</script>
+function removeItem(index) {
+    cart.splice(index, 1);
+    localStorage.setItem("cart", JSON.stringify(cart));
+    location.reload();
+}
 
 </body>
 </html>
