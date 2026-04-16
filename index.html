@@ -53,10 +53,43 @@
       </div>
       <!-- Repeat for other crocs -->
     </div>
+    <div class="card">
+  <img src="images/manchesterunited-red-jersey.jpg" class="card-img-top" alt="Manchester United Red Jersey" />
+  <div class="card-body">
+    <h5 class="card-title">Manchester United Red Jersey</h5>
+    <p class="card-text">P350</p>
+    <button class="btn btn-dark" onclick="addToCart('Manchester United Red Jersey', 350)">
+      Add to Cart
+    </button>
+  </div>
+</div>
   </main>
 
   <footer>
     <p>&copy; 2026 ANGIE'S CLOSET. All rights reserved.</p>
   </footer>
+  <script>
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+function addToCart(name, price) {
+    let product = {
+        name: name,
+        price: price,
+        quantity: 1
+    };
+
+    let existing = cart.find(item => item.name === name);
+
+    if (existing) {
+        existing.quantity++;
+    } else {
+        cart.push(product);
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    alert(name + " added to cart!");
+}
+</script>
 </body>
 </html>
