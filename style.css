@@ -301,7 +301,45 @@ footer {
 .product-card button:hover {
   background: #0080ff;
 }
-
+hero {
+  background-image: url('images/index-picture.jpg');
+  background-size: fill;
+  background-position: center;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ 
+.hero .container {
+  text-align: center;
+  color: #65b4d5;
+}
+ 
+.hero .display-4 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+ 
+.hero .lead {
+  font-size: 1.5rem;
+}
+ 
+.hero .btn {
+  font-size: 1.2rem;
+  padding: 12px 30px;
+  background-color: #1c69d4;
+  color: #65b4d5;
+  border: none;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+ 
+.hero .btn:hover {
+  background-color: #0b3a82;
+  color: #65b4d5;
+  transform: scale(1.1);
+}
  
 
 
