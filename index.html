@@ -7,6 +7,30 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <input type="text" id="searchBar" placeholder="Search products..." onkeyup="searchProducts()">
+
+<div id="product-list">
+  <div class="product">Crocs Classic</div>
+  <div class="product">Football Jersey</div>
+  <div class="product">Limited Edition Crocs</div>
+  <div class="product">National Team Jersey</div>
+</div>
+
+<script>
+function searchProducts() {
+  let input = document.getElementById('searchBar').value.toLowerCase();
+  let products = document.querySelectorAll('#product-list .product');
+  
+  products.forEach(product => {
+    if (product.innerText.toLowerCase().includes(input)) {
+      product.style.display = "block";
+    } else {
+      product.style.display = "none";
+    }
+  });
+}
+</script>
+
   <header>
     <h1>ANGIE'S CLOSET</h1>
     <nav>
