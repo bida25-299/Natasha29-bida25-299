@@ -9,13 +9,6 @@
 <body>
   <input type="text" id="searchBar" placeholder="Search products..." onkeyup="searchProducts()">
 
-<div id="product-list">
-  <div class="product">Crocs Classic</div>
-  <div class="product">Football Jersey</div>
-  <div class="product">Limited Edition Crocs</div>
-  <div class="product">National Team Jersey</div>
-</div>
-
 <script>
 function searchProducts() {
   let input = document.getElementById('searchBar').value.toLowerCase();
@@ -43,7 +36,67 @@ function searchProducts() {
       
     </nav>
   </header>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Angie's Closet</title>
+  <style>
+    .cart {
+      position: fixed;
+      top: 10px;
+      right: 20px;
+      background: #f4f4f4;
+      padding: 10px;
+      border-radius: 5px;
+    }
+    .product {
+      margin: 20px;
+      padding: 10px;
+      border: 1px solid #ddd;
+    }
+    button {
+      background: #0078d7;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    button:hover {
+      background: #005a9e;
+    }
+  </style>
+</head>
+<body>
 
+<div class="cart">
+  🛒 Cart: <span id="cart-count">0</span>
+</div>
+
+<div class="product">
+  <h3>Crocs Classic</h3>
+  <p>Price: $40</p>
+  <button onclick="addToCart('Crocs Classic', 40)">Add to Cart</button>
+</div>
+
+<div class="product">
+  <h3>Football Jersey</h3>
+  <p>Price: $60</p>
+  <button onclick="addToCart('Football Jersey', 60)">Add to Cart</button>
+</div>
+
+<script>
+  let cart = [];
+  
+  function addToCart(productName, price) {
+    cart.push({ name: productName, price: price });
+    document.getElementById('cart-count').innerText = cart.length;
+    console.log(cart); // For debugging
+  }
+</script>
+
+</body
+  </htm>
   <!-- Hero section -->
   <section class="hero-section">
     <div class="hero-overlay"></div>
