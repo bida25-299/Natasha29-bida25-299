@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Angie's Closet</title>
+  <style>
+    .cart {
+      position: fixed;
+      top: 10px;
+      right: 20px;
+      background: #f4f4f4;
+      padding: 10px;
+      border-radius: 5px;
+    }
+    .product {
+      margin: 20px;
+      padding: 10px;
+      border: 1px solid #ddd;
+    }
+    button {
+      background: #0078d7;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    button:hover {
+      background: #005a9e;
+    }
+  </style>
+</head>
+<body>
+
+<div class="cart">
+  🛒 Cart: <span id="cart-count">0</span>
+</div>
+
+<div class="product">
+  <h3>Crocs Classic</h3>
+  <p>Price: P350</p>
+  <button onclick="addToCart('Crocs Classic', 350)">Add to Cart</button>
+</div>
+
+<div class="product">
+  <h3>Football Jersey</h3>
+  <p>Price: P350</p>
+  <button onclick="addToCart('Football Jersey', 350)">Add to Cart</button>
+</div>
+
+<script>
+  let cart = [];
+  
+  function addToCart(productName, price) {
+    cart.push({ name: productName, price: price });
+    document.getElementById('cart-count').innerText = cart.length;
+    console.log(cart); // For debugging
+  }
+</script>
+
+</body>
+</html>
