@@ -1,61 +1,218 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Angie's Closet</title>
-  <style>
-    .cart {
-      position: fixed;
-      top: 10px;
-      right: 20px;
-      background: #f4f4f4;
-      padding: 10px;
-      border-radius: 5px;
-    }
-    .product {
-      margin: 20px;
-      padding: 10px;
-      border: 1px solid #ddd;
-    }
-    button {
-      background: #0078d7;
-      color: white;
-      border: none;
-      padding: 8px 12px;
-      cursor: pointer;
-      border-radius: 4px;
-    }
-    button:hover {
-      background: #005a9e;
-    }
-  </style>
+<html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Add to cart</title>
+   
+<style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+/* HEADER + NAVBAR */
+        header {
+            background: #333;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+ 
+        header h1{
+            margin:0;
+        }
+ 
+        nav  {
+            display: flex;
+            gap: 20px;
+        }
+ 
+        nav a {
+            color: white;
+            margin-right: 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+ 
+        nav a:hover{
+            color:aquamarine;
+        }
+ 
+/*MAIN LAYOUT */
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+ 
+        /* SIDEBAR */
+        .sidebar {
+            width: 220px;
+            background: #f2f2f2;
+            padding: 20px;
+}
+ 
+        .sidebar a {
+            display: block;
+            margin-bottom: 10px;
+            color: #333;
+            text-decoration: none;
+        }
+ 
+        .sidebar a:hover{
+             color:aquamarine;
+        }
+ 
+/* MAIN CONTENT */
+        .content {
+            flex: 1;
+            padding: 20px;
+        }
+ 
+        .content h1 {
+             margin-top: 0;
+        }
+       
+/*NEW FLEX SECTION */
+        .main-section {
+            display: flex;
+            gap: 40px;
+        }
+ 
+        /*PRODUCTS*/
+        .products-section{
+            flex:2;
+        }
+ 
+        .product {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ccc;
+            padding: 10px 0;
+        }
+ 
+        .price {
+            font-weight: bold;
+        }
+/* CART SUMMARY */
+        .cart-summary {
+            margin-top: 30px;
+            padding: 15px;
+            background: #eee;
+            width: 250px;
+            border-radius: 8px;
+        }
+/*BUTTON */
+        button {
+            margin-top: 20px;
+            padding: 10px 15px;
+            background: #04855c;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+ 
+        button:hover {
+            background: #555;
+        }
+    </style>
+ 
 </head>
+ 
 <body>
-
-<div class="cart">
-  🛒 Cart: <span id="cart-count">0</span>
+ 
+<header>
+    <h1>Add to cart</h1>
+ 
+      <nav>
+        <a href="index.html">Home</a>
+        <a href=crocs.html">crocs</a>
+        <a href="football-jerseys.html">football-jerseys</a>
+        <a href="AboutUs.html">About Us</a>
+        <a href="Contact.html">Contact</a>
+        <a href="Feedback.html">Feedback</a>
+        <a href="Addtocart.html">Add to cart</a>
+        
+      </nav>
+    </header>
+ 
+<div class="container">
+ 
+  <!--SIDEBAR-->
+<div class="sidebar">
+    <h3>Categories</h3>
+    <a href="crocs.html">crocs</a>
+    <a href="football-jerseys.html">football-jerseys</a>
+    
 </div>
-
-<div class="product">
-  <h3>Crocs Classic</h3>
-  <p>Price: P350</p>
-  <button onclick="addToCart('Crocs Classic', 350)">Add to Cart</button>
+ 
+<!--CONTENT-->
+<div class="content">
+    <h1>Select Products</h1>
+ 
+    <!--NEW FLEX WRAPPER-->
+    <div class="main-section">
+ 
+        <!--LEFT:PRODUCTS-->
+  <div class="products-section">
+         
+        <div class="product">
+            <div class="product-info">
+                <h3>classiccrocs-yellow</h3>
+                <p class="price">P300</p>
+                </div>
+                <input type="checkbox" class="item" value="300">
+        </div>
+ 
+         <div class="product">
+            <div class="product-info">
+                <h3>classiccrocs-red</h3>
+                <p class="price">P250</p>
+                </div>
+                <input type="checkbox" class="item" value="250">
+         </div>
+ 
+<!--FIXED TYPO HERE-->
+         <div class="product">
+            <div class="product-info">
+                <h3>manchestercity-blue-jersey</h3>
+                <p class="price">P350</p>
+                </div>
+                <input type="checkbox" class="item" value="350">
+            </div>
+ 
+            <button type="button" onclick="calculateCart()"> Add Selected to Cart</button>
+        </div>
+ 
+<!--RIGHT: CART SUMMARY -->
+        <div class="cart-summary">
+            <h3> Cart Summary</h3>
+            <p id="items">Items selected: 0</p>
+            <p id="total">Total:0</p>
+        </div>
+ 
+    </div>
+  </div>
+ 
 </div>
-
-<div class="product">
-  <h3>Football Jersey</h3>
-  <p>Price: P350</p>
-  <button onclick="addToCart('Football Jersey', 350)">Add to Cart</button>
-</div>
-
+ 
+<!--ADDED JAVASCRIPT-->
 <script>
-  let cart = [];
-  
-  function addToCart(productName, price) {
-    cart.push({ name: productName, price: price });
-    document.getElementById('cart-count').innerText = cart.length;
-    console.log(cart); // For debugging
-  }
+function calculateCart() {
+    let items = document.querySelectorAll( '.item:checked');
+    let total = 0;
+ 
+    items.forEach(item => {
+          total += Number(item.value);
+    });
+ 
+    document.getElementById("items").innerText= "Items selected:" +items.length;
+    document.getElementById("total").innerText="Total: P"+total;
+}
 </script>
-
+ 
 </body>
 </html>
+ 
