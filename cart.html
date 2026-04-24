@@ -148,7 +148,24 @@
             <p id="total">Total:0</p>
          <ul id="cart-list"></ul>
         </div>
- 
+ <h3>Checkout</h3>
+
+<form onsubmit="submitOrder(event)">
+    <input type="text" id="name" placeholder="Full Name" required><br><br>
+
+    <input type="text" id="phone" placeholder="Phone Number" required><br><br>
+
+    <input type="text" id="address" placeholder="Delivery Address" required><br><br>
+
+    <select id="payment" required>
+        <option value="">Select Payment Method</option>
+        <option value="cash">Cash on Delivery</option>
+        <option value="mobile">Mobile Money</option>
+        <option value="card">Card Payment</option>
+    </select><br><br>
+
+    <button type="submit">Place Order</button>
+</form>
     </div>
   </div>
  
@@ -183,6 +200,41 @@ window.onload = loadCart;
 function clearCart() {
     localStorage.removeItem("cart");
     loadCart();
+}
+</script>
+ <script>
+function submitOrder(event) {
+    event.preventDefault();
+
+    let name = document.getElementById("name").value;
+    let phone = document.getElementById("phone").value;
+    let address = document.getElementById("address").value;
+    let payment = document.getElementById("payment").value;
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    if (cart.length === 0) {
+        alert("Your cart is empty!");
+        return;
+    }
+
+    let total = 0;
+    cart.forEach(item => total += item.price);
+
+    // Simulate order submission
+    alert(
+        "Order placed!\n\n" +
+        "Name: " + name +
+        "\nTotal: P" + total +
+        "\nPayment: " + payment
+    );
+
+    // Clear cart after order
+    localStorage.removeItem("cart");
+    loadCart();
+
+    // Optional: reset form
+    document.querySelector("form").reset();
 }
 </script>
  
