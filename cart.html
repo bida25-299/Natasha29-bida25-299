@@ -191,6 +191,7 @@
             <h3> Cart Summary</h3>
             <p id="items">Items selected: 0</p>
             <p id="total">Total:0</p>
+         <ul id="cart-list"></ul>
         </div>
  
     </div>
@@ -200,16 +201,33 @@
  
 <!--ADDED JAVASCRIPT-->
 <script>
-function calculateCart() {
-    let items = document.querySelectorAll( '.item:checked');
+function loadCart() {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
     let total = 0;
- 
-    items.forEach(item => {
-          total += Number(item.value);
+
+    let list = document.getElementById("cart-list");
+    list.innerHTML = "";
+
+    cart.forEach(item => {
+        total += item.price;
+
+        let li = document.createElement("li");
+        li.textContent = item.name + " - P" + item.price;
+        list.appendChild(li);
     });
- 
-    document.getElementById("items").innerText= "Items selected:" +items.length;
-    document.getElementById("total").innerText="Total: P"+total;
+
+    document.getElementById("items").innerText = "Items selected: " + cart.length;
+    document.getElementById("total").innerText = "Total: P" + total;
+}
+
+window.onload = loadCart;
+</script>
+ <button onclick="clearCart()">Clear Cart</button>
+
+<script>
+function clearCart() {
+    localStorage.removeItem("cart");
+    loadCart();
 }
 </script>
  
