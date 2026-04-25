@@ -12,9 +12,8 @@
 ============================ */
 body {
   font-family: 'Segoe UI', Arial, sans-serif;
-  background: linear-gradient(to right, #ffd6e8, #e6ccff, #f3e6ff);
+  background: linear-gradient(to right, #c084fc, #a855f7, #7e22ce);
   color: #333;
-  min-height: 100vh;
 }
 
 /* ============================
@@ -139,7 +138,7 @@ h2 {
 }
 
 .product-card {
-  background: rgba(255,255,255,0.8);
+  background: rgba(255,255,255,0.9);
   color: #333;
 }
 
@@ -297,7 +296,7 @@ footer {
 .product-card button:hover {
   background: #0080ff;
 }
-hero {
+.hero {
   background-image: url('images/index-picture.jpg');
   background-size: fill;
   background-position: center;
