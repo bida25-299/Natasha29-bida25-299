@@ -15,6 +15,25 @@ body {
   background: linear-gradient(to right, #c084fc, #a855f7, #7e22ce);
   color: #333;
 }
+/* FULLSCREEN BACKGROUND VIDEO */
+
+#bg-video {
+
+  position: fixed;
+
+  top: 0;
+
+  left: 0;
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  z-index: -2;
+
+}
 
 /* ============================
    Header
@@ -416,35 +435,6 @@ card {
 
 }
 
-/* Optional dark overlay so text is readable */
-
-body::before {
-
-  content: "";
-
-  position: fixed;
-
-  top: 0;
-
-  left: 0;
-
-  width: 100%;
-
-  height: 100%;
-
-  background: rgba(0,0,0,0.5);
-
-  z-index: -1;
-
-}
- header, .hero-section, footer {
- position: relative;
- z-index: 1;
- color: white;
-}
-  
-
- 
 
 
 
