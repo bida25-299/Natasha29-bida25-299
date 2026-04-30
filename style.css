@@ -15,25 +15,6 @@ body {
   background: linear-gradient(to right, #c084fc, #a855f7, #7e22ce);
   color: #333;
 }
-/* FULLSCREEN BACKGROUND VIDEO */
-
-#bg-video {
-
-  position: fixed;
-
-  top: 0;
-
-  left: 0;
-
-  width: 100%;
-
-  height: 100%;
-
-  object-fit: cover;
-
-  z-index: -2;
-
-}
 
 /* ============================
    Header
@@ -414,27 +395,4 @@ card {
   flex-direction: column;
   justify-content: space-between;
 } 
-
-/* FULLSCREEN BACKGROUND VIDEO */
-
-#bg-video {
-
-  position: fixed;
-
-  top: 0;
-
-  left: 0;
-
-  width: 100%;
-
-  height: 100%;
-
-  object-fit: cover;
-
-  z-index: -2;
-
-}
-
-
-
 
