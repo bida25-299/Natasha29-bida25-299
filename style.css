@@ -1,29 +1,23 @@
-/* ============================
-   Reset
-============================ */
-* {
+
+ {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ============================
-   Body
-============================ */
+
 body {
   font-family: 'Segoe UI', Arial, sans-serif;
   background: linear-gradient(to right, #c084fc, #a855f7, #7e22ce);
   color: #333;
 }
 
-/* ============================
-   Header
-============================ */
+
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(75, 0, 130, 0.9); /* dark purple */
+  background: rgba(75, 0, 130, 0.9);
   padding: 20px 40px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.5);
   flex-wrap: wrap;
@@ -68,9 +62,7 @@ nav a:hover::after {
   width: 100%;
 }
 
-/* ============================
-   Hero Section
-============================ */
+
 .hero-section {
   height: 70vh;
   background: url("images/index-picture.jpg") center/cover no-repeat;
@@ -115,9 +107,7 @@ nav a:hover::after {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* ============================
-   Product Grid
-============================ */
+
 main {
   max-width: 1200px;
   margin: 40px auto;
@@ -180,9 +170,7 @@ h2 {
   background: #0080ff;
 }
 
-/* ============================
-   Pinterest Section
-============================ */
+
 .inspiration {
   text-align: center;
   margin: 40px auto;
@@ -198,9 +186,6 @@ h2 {
   box-shadow: 0 6px 20px rgba(0,0,0,0.5);
 }
 
-/* ============================
-   Footer
-============================ */
 footer {
   margin-top: 40px;
   padding: 20px;
