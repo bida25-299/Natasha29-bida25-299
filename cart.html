@@ -10,7 +10,7 @@
             margin: 0;
             font-family: Arial, sans-serif;
         }
-/* HEADER + NAVBAR */
+
         header {
             background: #333;
             color: white;
@@ -40,13 +40,13 @@
             color:aquamarine;
         }
  
-/*MAIN LAYOUT */
+
         .container {
             display: flex;
             min-height: 100vh;
         }
  
-        /* SIDEBAR */
+       
         .sidebar {
             width: 220px;
             background: #f2f2f2;
@@ -64,7 +64,7 @@
              color:aquamarine;
         }
  
-/* MAIN CONTENT */
+
         .content {
             flex: 1;
             padding: 20px;
@@ -74,13 +74,13 @@
              margin-top: 0;
         }
        
-/*NEW FLEX SECTION */
+
         .main-section {
             display: flex;
             gap: 40px;
         }
  
-        /*PRODUCTS*/
+        
         .products-section{
             flex:2;
         }
@@ -96,7 +96,7 @@
         .price {
             font-weight: bold;
         }
-/* CART SUMMARY */
+
         .cart-summary {
             margin-top: 30px;
             padding: 15px;
@@ -104,7 +104,7 @@
             width: 250px;
             border-radius: 8px;
         }
-/*BUTTON */
+
         button {
             margin-top: 20px;
             padding: 10px 15px;
@@ -140,7 +140,7 @@
 
            
  
-<!--RIGHT: CART SUMMARY -->
+
         <div class="cart-summary">
             <h3> Cart Summary</h3>
             <p id="items">Items selected: 0</p>
@@ -170,7 +170,7 @@
  
 </div>
  
-<!--ADDED JAVASCRIPT-->
+
 <script>
 function loadCart() {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -220,7 +220,7 @@ function submitOrder(event) {
     let total = 0;
     cart.forEach(item => total += item.price);
 
-    // Simulate order submission
+    
     alert(
         "Order placed!\n\n" +
         "Name: " + name +
@@ -228,11 +228,11 @@ function submitOrder(event) {
         "\nPayment: " + payment
     );
 
-    // Clear cart after order
+    
     localStorage.removeItem("cart");
     loadCart();
 
-    // Optional: reset form
+    
     document.querySelector("form").reset();
 }
 </script>
